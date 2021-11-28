@@ -8,15 +8,21 @@ import { IndexRouter } from "./controllers/v0/index.router";
 import bodyParser from "body-parser";
 import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
   dotenv.config();
-
+  try {
+  console.log('Waiting conn.');
   await sequelize.addModels(V0_FEED_MODELS);
   await sequelize.addModels(V0_USER_MODELS);
-  await sequelize.sync();
-
+  await sequelize.sync({ force: true, logging: console.log });
   console.log("Database Connected");
 
+  } catch (error) {
+    console.error(error);
+  }
+
+  
   const app = express();
   const port = process.env.PORT || 8080;
 
@@ -33,7 +39,7 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
   // Start the Server
   app.listen(port, () => {
-    console.log(`server running ${process.env.URL}`);
+    console.log(`server running ${process.env.PORT}`);
     console.log(`press CTRL+C to stop server`);
   });
 })();
