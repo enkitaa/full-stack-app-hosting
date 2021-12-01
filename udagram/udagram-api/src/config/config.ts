@@ -13,7 +13,6 @@ export const config = {
   aws_secret_key: process.env.AWS_SECRET,
   aws_media_bucket: process.env.AWS_BUCKET,
   sessionToken: process.env.AWS_TOKEN,
-  url: process.env.URL,
   jwt: {
     secret: process.env.JWT_SECRET,
   },
