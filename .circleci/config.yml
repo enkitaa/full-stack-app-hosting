@@ -10,6 +10,20 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - node/install
+      - run:
+          name: Check current version of node
+          command: node -v
+      - run:
+          name: Get and install node version manager.
+          command: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+      - run:
+          name: Install Node version 14.17.0 using NVM and set as default
+          command: |
+            nvm install 14.17.0
+            nvm alias default 14.17.0
+      - run:
+          name: Verify new version of node
+          command: node -v
       - checkout
       - aws-cli/setup
       - eb/setup
