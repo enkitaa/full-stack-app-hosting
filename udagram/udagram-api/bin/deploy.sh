@@ -1,4 +1,3 @@
-eb init ug
 eb use Ug-env
 eb setenv \
     AWS_ACCESS_KEY=$AWS_ACCESS_KEY \
