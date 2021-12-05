@@ -27,7 +27,13 @@ jobs:
       - checkout
       - aws-cli/setup
       - eb/setup
-
+      
+      - run:
+          name: Front-End Install
+          command: |
+            cd udagram
+            npm run frontend:install
+            cd ..
       - run:
           name: Front-End Build
           command: |
@@ -57,12 +63,6 @@ jobs:
           command: |
             cd udagram
             npm run backend:deploy
-            cd ..
-      - run:
-          name: Front-End Install
-          command: |
-            cd udagram
-            npm run frontend:install
             cd ..
       
 
