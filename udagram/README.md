@@ -1,6 +1,8 @@
 # Udagram
 
-This application is provided to you as an alternative starter project, if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
+The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 ## Getting Started
 
@@ -9,7 +11,6 @@ This application is provided to you as an alternative starter project, if you do
 1. Open a terminal and navigate to the root of the repo
 1. follow the instructions in the installation step
 
-The project can run but is missing some information to connect to the database and storage service. These will be setup during the course of the project
 
 ### Dependencies
 
@@ -18,7 +19,7 @@ The project can run but is missing some information to connect to the database a
 
 - npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
 
-- AWS CLI v2, v1 can work but was not tested for this project
+- AWS CLI v2
 
 - A RDS database running Postgres.
 
@@ -30,7 +31,7 @@ The project can run but is missing some information to connect to the database a
 
 Provision the necessary AWS services needed for running the application:
 
-1. In AWS, provision a publicly available RDS database running Postgres. <Place holder for link to classroom article>
+1. In AWS, provision a publicly available RDS database running Postgres.
 1. In AWS, provision a s3 bucket for hosting the uploaded files. <Place holder for tlink to classroom article>
 1. Export the ENV variables needed or use a package like [dotnev](https://www.npmjs.com/package/dotenv)/.
 1. From the root of the repo, navigate udagram-api folder `cd starter/udagram-api` to install the node_modules `npm install`. After installation is done start the api in dev mode with `npm run dev`.
@@ -56,9 +57,9 @@ The e2e tests are using Protractor and Jasmine.
 
 ## Built With
 
-- [Angular](https://angular.io/) - Single Page Application Framework
-- [Node](https://nodejs.org) - Javascript Runtime
-- [Express](https://expressjs.com/) - Javascript API Framework
+- [<img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" />](https://angular.io/)
+- [<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />](https://nodejs.org/en/) - Javascript Runtime
+- [<img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" />](https://expressjs.com/) - Javascript API Framework
 
 ## License
 

@@ -1,4 +1,6 @@
+#CircleCI version
 version: 2.1
+#Orbs for node and cli configuration
 orbs:
   node: circleci/node@4.7.0
   aws-role-config: opensimsim/aws-role-config@1.1.0
@@ -10,6 +12,7 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
+      #node valid version setup
       - node/install
       - run:
           name: Check current version of node
@@ -26,9 +29,10 @@ jobs:
           name: Verify new version of node
           command: node -v
       - checkout
+      #cli setup
       - aws-cli/setup
       - eb/setup
-      
+      #Frontend jobs
       - run:
           name: Front-End Install
           command: |
@@ -47,6 +51,7 @@ jobs:
             cd udagram
             npm run frontend:deploy
             cd ..
+      #Backend jobs
       - run:
           name: Back-End Install
           command: |
@@ -65,8 +70,7 @@ jobs:
             cd udagram
             npm run backend:deploy
             cd ..
-      
-
+            
 workflows:
   all:
     jobs:
