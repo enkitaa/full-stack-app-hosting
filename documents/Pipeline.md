@@ -1,6 +1,6 @@
 ## Application Pipeline
 
-![Pipeline_architecture](screenshots\Pipeline_arch.png)
+![Pipeline_architecture](..\screenshots\Pipeline_arch.png)
 
 ### CI/CD
 

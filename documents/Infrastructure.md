@@ -2,7 +2,7 @@
 
 ### Deploment Platform - AWS
 
-![Infrastructure_architecture](screenshots\Infra_arch.png)
+![Infrastructure_architecture](..\screenshots\Infra_arch.png)
 
 #### RDS Postgres
 

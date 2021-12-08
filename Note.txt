@@ -1,0 +1,1 @@
+After successful deployment the application is running fine but due to expiring tokens is getting availability issues. I have to change env variables every time and deploy again. I have attached screenshots for working environment in documents folder.
