@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/enkitaa/full-stack-app-hosting/tree/master.svg?style=svg)](https://circleci.com/gh/enkitaa/full-stack-app-hosting/?branch=master)
+
 # Udagram
 
 The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
