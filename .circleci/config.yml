@@ -73,8 +73,8 @@ jobs:
             
 workflows:
   all:
-    jobs:
-      - build
-        filters:
+  jobs:
+      - build:
+          filters:
             branches:
-              only: master
+             only: master
